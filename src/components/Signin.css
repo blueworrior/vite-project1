@@ -1,0 +1,80 @@
+.bc{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.signin{
+    width: 570px;
+    height: 500px;
+    background-color: blueviolet;
+    border: 5px solid cyan;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 8%;
+    border-radius: 10px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+.signin h2{
+    position: relative;
+    top: 25px;
+    width: 220px;
+    margin: auto;
+    margin-top: 30px;
+    color: aqua;
+}
+.signin h3,.signin input,.signin button{
+    font-size: 13px;
+    margin-left: 130px;
+}
+#d1{
+    margin-top: 80px;
+}
+#d2{
+    margin-top: 40px;
+}
+.signin input{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: cyan;
+    height: 30px;
+    width: 300px;
+    border-radius: 5px;
+    margin-top: 1%;
+    font-size: 17px;
+}
+.signin button{
+    margin-top: 50px;
+    background-color: cyan;
+    color: blueviolet;
+    height: 40px;
+    width: 100px;
+    font-size: large;
+    border-radius: 5px;
+    position: relative;
+    left: 200px;
+    border: none;
+    font-weight: 700;
+    &:hover{
+        background-color: rgb(0, 238, 238);
+        color: blueviolet;
+        cursor: pointer;
+    }
+}
+#il{
+    color: blueviolet;
+    text-decoration: none;
+    padding: 8px 24px;
+    position: relative;
+    right: 4px;
+    &:hover{
+        text-decoration: none;
+    }
+}

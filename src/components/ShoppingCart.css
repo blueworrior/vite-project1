@@ -1,0 +1,48 @@
+.prd{
+    background-color: aqua;
+    height: 200px;
+    width: 800px;
+    margin: auto;
+    margin-top: 100px;
+    display: flex;
+}
+.prd div{
+    border-radius: 5px;
+    background-color: blueviolet;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 160px;
+    width: 240px;
+    font-family: sans-serif;
+    align-items: center;
+    justify-content: center;
+}
+.prd div h1{
+margin-top: 20px;
+margin-left: 50px;
+}
+.prd div p{
+    margin-top: 15px;
+    margin-left:85px;
+}
+.prd div button{
+    margin-top: 20px;
+    margin-left: 45px;
+    background-color: aqua;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 150px;
+    &:hover{
+        background-color: rgb(0, 241, 241);
+    }
+}
+.totalPrice{
+    background-color: blueviolet;
+    width: 250px;
+    border-radius: 10px;
+    font-family: sans-serif;
+    padding: 10px;
+    margin: auto;
+    margin-top: 20px;
+}

@@ -1,0 +1,67 @@
+/* searchbar */
+.searchdiv{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 350px;
+    height: 150px;
+    font-family: sans-serif;
+  }
+  .searchdiv h1{
+    padding-top: 23px;
+    margin-left: 10px;
+    font-size: 18px;
+    font-family: sans-serif;
+  }
+  .searchbtn{
+    margin-left: 5px;
+    margin-top: 5px;
+    display: flex;
+    gap: 10px;
+  }
+  .searchdiv input{
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 25px;
+    width: 280px;
+    color: aqua;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 5px;
+  }
+  .searchdiv textarea{
+    background-color: blueviolet;
+    margin-left: 10px;
+    margin-top: 10px;
+    height: 100px;
+    width: 500px;
+  }
+  .searchbtn button{
+    margin-left: 5px;
+    /* height: 30px; */
+    background-color: blueviolet;
+    color: aqua;
+    border: none;
+    border-radius: 5px;
+    &:hover{
+      cursor: pointer;
+      background-color: rgb(127, 40, 210);
+    }
+  }
+  .searchdiv p{
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  .details{
+    margin-top: 100px;
+    font-family: sans-serif;
+    margin-left: 30px;
+  }
+  .details p{
+      margin-top: 8px;
+      width: 1200px;
+    }
+    .details h2{
+      margin-top: 10px;
+      font-weight: 700;
+  }
