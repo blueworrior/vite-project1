@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import "./Navbar.css";
-import PropTypes, { prototype } from "prop-types";
+import PropTypes, { prohreftype } from "prop-types";
 import Signin from "./signin";
 import States from "./States";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
 
@@ -29,16 +29,16 @@ const Navbar = (props) => {
             </div>
           </li>
           <li>
-            <Link style={props.mode} id="li" to={"/"}>Home</Link>
+            <a style={props.mode} id="li" href={""}>Home</a>
           </li>
           <li>
-          <Link style={props.mode} id="li" to={""}>Trending</Link>
+          <a style={props.mode} id="li" href={""}>Trending</a>
           </li>
           <li>
-          <Link style={props.mode} id="li" to={""}>Category</Link>
+          <a style={props.mode} id="li" href={""}>Category</a>
           </li>
           <li>
-            <Link style={props.mode} id="li" to={"/about"}>About</Link>
+            <a style={props.mode} id="li" href={""}>About</a>
           </li>
 
           <li id="thmli">
@@ -50,7 +50,7 @@ const Navbar = (props) => {
             </select>
           </li>
           <li>
-            <Link style={props.mode2} to={"/login"} id="si">Sign in</Link>
+            <a style={props.mode2} href={""} id="si">Sign in</a>
           </li>
         </ul>
       </div>
