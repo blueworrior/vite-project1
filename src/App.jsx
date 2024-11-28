@@ -156,6 +156,7 @@ function App() {
         <Alert alert={alert}/>
 
         <States mode={mode} mode2={mode2} showAlert={showAlert}/>
+        
             {/* <Routes> */}
                 {/* <Route path='/' element={<States mode={mode} mode2={mode2} showAlert={showAlert}/>} /> */}
 
