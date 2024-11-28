@@ -29,16 +29,16 @@ const Navbar = (props) => {
             </div>
           </li>
           <li>
-            <a style={props.mode} id="li" href={""}>Home</a>
+            <a style={props.mode} id="li" href={"#"}>Home</a>
           </li>
           <li>
-          <a style={props.mode} id="li" href={""}>Trending</a>
+          <a style={props.mode} id="li" href={"#"}>Trending</a>
           </li>
           <li>
-          <a style={props.mode} id="li" href={""}>Category</a>
+          <a style={props.mode} id="li" href={"#"}>Category</a>
           </li>
           <li>
-            <a style={props.mode} id="li" href={""}>About</a>
+            <a style={props.mode} id="li" href={"#"}>About</a>
           </li>
 
           <li id="thmli">
@@ -50,7 +50,7 @@ const Navbar = (props) => {
             </select>
           </li>
           <li>
-            <a style={props.mode2} href={""} id="si">Sign in</a>
+            <a style={props.mode2} href={"#"} id="si">Sign in</a>
           </li>
         </ul>
       </div>
