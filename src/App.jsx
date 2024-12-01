@@ -153,7 +153,7 @@ function App() {
 
         <Navbar title = "ANIDAY" handleMode={handleMode} mode={mode} mode2={mode2} sun={sun} moon={moon} modecircle={modecircle} theme={theme} setTheme={setTheme} handleTheme={handleTheme}/>
 
-        {/* <Alert alert={alert}/> */}
+        <Alert alert={alert}/>
         <h1>hello</h1>
 
         {/* <States mode={mode} mode2={mode2} showAlert={showAlert}/> */}
