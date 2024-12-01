@@ -6,8 +6,7 @@ import ShoppingCart from './components/Shoppingcart'
 import Signin from './components/signin'
 import Alert from './components/Alert'
 import About from './components/about'
-// import { BrowserRouter, Routes, Route} from "react-router-dom"
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
     const [modecircle, setmodecircle] = useState({
@@ -141,7 +140,7 @@ function App() {
             setMode(modeChange)
             setSun('sun-white.png')
             setMoon('moon-black.png')
-            showAlert('Dark mode enable','success')
+            showAlert('Boxer mode enable','success')
         }
         else if(mode.backgroundColor === 'black'){
             handleTheme()
@@ -149,24 +148,21 @@ function App() {
     }
   return (
       <>
-        {/* <BrowserRouter> */}
+        <BrowserRouter>
 
         <Navbar title = "ANIDAY" handleMode={handleMode} mode={mode} mode2={mode2} sun={sun} moon={moon} modecircle={modecircle} theme={theme} setTheme={setTheme} handleTheme={handleTheme}/>
 
         <Alert alert={alert}/>
-        <h1>hello</h1>
 
-        {/* <States mode={mode} mode2={mode2} showAlert={showAlert}/> */}
+            <Routes>
+                <Route path='/' element={<States mode={mode} mode2={mode2} showAlert={showAlert}/>} />
 
-            {/* <Routes> */}
-                {/* <Route path='/' element={<States mode={mode} mode2={mode2} showAlert={showAlert}/>} /> */}
+                <Route path='/login' element={<Signin mode={mode} mode2={mode2}/>}/>
 
-                {/* <Route path='/login' element={<Signin mode={mode} mode2={mode2}/>}/> */}
+                <Route path='/about' element={<About mode={mode} mode2={mode2}/> } />
+            </Routes>
 
-                {/* <Route path='/about' element={<About mode={mode} mode2={mode2}/> } /> */}
-            {/* </Routes> */}
-
-        {/* </BrowserRouter> */}
+        </BrowserRouter>
         
 
       </>
