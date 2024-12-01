@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import './Signin.css'
 
 const title = () => {
@@ -20,7 +20,7 @@ const Signin = (props) => {
             <h3 id='d2'>PASSWORD</h3>
             <input style={props.mode2} type="password" />
             <button>
-              <a id='il' href={""} style={props.mode2} onClick={props.handlecomp}>Login</a>
+              <Link id='il' to={"/"} style={props.mode2} onClick={props.handlecomp}>Login</Link>
             </button>
         </div>
     </div>
