@@ -167,12 +167,12 @@ function App() {
 
         <Alert alert={alert}/>
 
-        {showcomp && <Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>}
+        {/* {showcomp && <Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>} */}
 
             <Routes>
                 <Route path='/' element={<States mode={mode} mode2={mode2} showAlert={showAlert}/>} />
 
-                {/* <Route path='/login' element={<Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>}/> */}
+                <Route path='/login' element={<Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>}/>
 
                 <Route path='/about' element={<About mode={mode} mode2={mode2}/> } />
             </Routes>
