@@ -20,7 +20,7 @@ const Signin = (props) => {
             <h3 id='d2'>PASSWORD</h3>
             <input style={props.mode2} type="password" />
             <button>
-              <Link id='il' to={"/"} style={props.mode2} onClick={props.handlecomp}>Login</Link>
+              <Link id='il' to={"/vite-project1/"} style={props.mode2} onClick={props.handlecomp}>Login</Link>
             </button>
         </div>
     </div>
