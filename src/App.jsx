@@ -7,8 +7,10 @@ import Signin from './components/signin'
 import Alert from './components/Alert'
 import About from './components/about'
 import { BrowserRouter, Routes, Route} from "react-router-dom"
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 function App() {
+  const [showcomp, setshowcomp] = useState(false)
     const [modecircle, setmodecircle] = useState({
         left: '2px'
     })
@@ -120,6 +122,17 @@ function App() {
             setAlert(null)
         }, 1500);
     }
+    const handlecomp = ()=>{
+      if(showcomp === false){
+          setshowcomp(true)
+        
+        }
+
+        else{
+            setshowcomp(false)
+            
+        }
+    }
     const handleMode = () => {
         if(mode.backgroundColor != 'black'){
             let modeChange = ({
@@ -140,7 +153,7 @@ function App() {
             setMode(modeChange)
             setSun('sun-white.png')
             setMoon('moon-black.png')
-            showAlert('Boxer mode enable','success')
+            showAlert('Dark mode enable','success')
         }
         else if(mode.backgroundColor === 'black'){
             handleTheme()
@@ -150,14 +163,16 @@ function App() {
       <>
         <BrowserRouter>
 
-        <Navbar title = "ANIDAY" handleMode={handleMode} mode={mode} mode2={mode2} sun={sun} moon={moon} modecircle={modecircle} theme={theme} setTheme={setTheme} handleTheme={handleTheme}/>
+        <Navbar title = "ANIDAY" handlecomp={handlecomp} handleMode={handleMode} mode={mode} mode2={mode2} sun={sun} moon={moon} modecircle={modecircle} theme={theme} setTheme={setTheme} handleTheme={handleTheme}/>
 
         <Alert alert={alert}/>
+
+        {showcomp && <Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>}
 
             <Routes>
                 <Route path='/' element={<States mode={mode} mode2={mode2} showAlert={showAlert}/>} />
 
-                <Route path='/login' element={<Signin mode={mode} mode2={mode2}/>}/>
+                {/* <Route path='/login' element={<Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>}/> */}
 
                 <Route path='/about' element={<About mode={mode} mode2={mode2}/> } />
             </Routes>
