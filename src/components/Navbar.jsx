@@ -29,7 +29,7 @@ const Navbar = (props) => {
             </div>
           </li>
           <li>
-            <Link style={props.mode} id="li" to={"/"}>Home</Link>
+            <Link style={props.mode} id="li" to={"/vite-project1/"}>Home</Link>
           </li>
           <li>
           <Link style={props.mode} id="li" to={""}>Trending</Link>
@@ -50,7 +50,7 @@ const Navbar = (props) => {
             </select>
           </li>
           <li>
-            <Link style={props.mode2} to={"/login"} id="si">Sign in</Link>
+            <Link style={props.mode2} to={"/vite-project1/login"} id="si">Sign in</Link>
           </li>
         </ul>
       </div>

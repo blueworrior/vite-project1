@@ -167,14 +167,14 @@ function App() {
 
         <Alert alert={alert}/>
 
-        <States mode={mode} mode2={mode2} showAlert={showAlert}/>
+        {/* <States mode={mode} mode2={mode2} showAlert={showAlert}/> */}
 
         {/* {showcomp && <Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>} */}
 
             <Routes>
-                {/* <Route path='/' element={<States mode={mode} mode2={mode2} showAlert={showAlert}/>} /> */}
+                <Route path='/vite-project1/' element={<States mode={mode} mode2={mode2} showAlert={showAlert}/>} />
 
-                <Route path='/login' element={<Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>}/>
+                <Route path='/vite-project1/login' element={<Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>}/>
 
                 <Route path='/vite-project1/about' element={<About mode={mode} mode2={mode2}/> } />
             </Routes>
