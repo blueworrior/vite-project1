@@ -32,10 +32,10 @@ const Navbar = (props) => {
             <Link style={props.mode} id="li" to={"/vite-project1/"}>Home</Link>
           </li>
           <li>
-          <Link style={props.mode} id="li" to={""}>Trending</Link>
+          <Link style={props.mode} id="li" to={"/vite-project1"}>Trending</Link>
           </li>
           <li>
-          <Link style={props.mode} id="li" to={""}>Category</Link>
+          <Link style={props.mode} id="li" to={"/vite-project1"}>Category</Link>
           </li>
           <li>
             <Link style={props.mode} id="li" to={"/vite-project1/about"}>About</Link>
