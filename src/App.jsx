@@ -176,7 +176,7 @@ function App() {
 
                 <Route path='/login' element={<Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>}/>
 
-                <Route path='/about' element={<About mode={mode} mode2={mode2}/> } />
+                <Route path='/vite-project1/about' element={<About mode={mode} mode2={mode2}/> } />
             </Routes>
 
         </BrowserRouter>
