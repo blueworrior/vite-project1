@@ -106,7 +106,7 @@ const States = (props) => {
             </div>
             <div className="details">
                     <p>Render: {a}</p>
-                    <p>{text.length===0?0:text.split(" ").length} Words and {text.length} characters</p>
+                    <p>{text.split(" ").filter((element) => { return element.length !=0}).length} Words and {text.length} characters</p>
                     <p>{ text.length===0?0:parseFloat((text.split(" ").length)*0.008) } minutes or {parseInt((text.split(" ").length)*0.008*60)} seconds </p>
                     <h2>Preview</h2>
                     <p>{text.length>0?`Your text: ${text}`:'Enter text in the textbar for preview '}</p>

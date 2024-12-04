@@ -1,6 +1,6 @@
 import './App.css'
 import React,{useState} from 'react'
-import Navbar from './components/navbar'
+import Navbar from './components/Navbar'
 import States from './components/States'
 import ShoppingCart from './components/Shoppingcart'
 import Signin from './components/signin'
@@ -10,9 +10,9 @@ import { BrowserRouter, Routes, Route} from "react-router-dom"
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 function App() {
-  const [showcomp, setshowcomp] = useState(false)
+    const [showcomp, setshowcomp] = useState(false)
     const [modecircle, setmodecircle] = useState({
-        left: '2px'
+        left: '1.5px'
     })
     const [sun, setSun] = useState('sun-black.png')
     const [moon, setMoon] = useState('moon-og.png')
@@ -31,6 +31,9 @@ function App() {
     const [theme,setTheme] = useState("OG")
 
     const handleTheme = () => {
+        setmodecircle({
+            left: '1.5px'
+        })
         if(theme == 'OG'){
             let modeChange = ({
                 backgroundColor: 'blueviolet',
@@ -40,9 +43,6 @@ function App() {
             document.body.style.backgroundColor = 'cyan'
             showAlert('Light mode enable','success')
             document.body.style.color = 'black'
-            setmodecircle({
-                left: '2px'
-            })
             setMode2({
                 backgroundColor: 'cyan',
                 color: 'blueviolet'
@@ -62,7 +62,6 @@ function App() {
                 color: 'green'
             })
             setmodecircle({
-                left: '2px',
                 backgroundColor: 'lightgreen'
             })
             setSun('sun-black.png')
@@ -82,7 +81,6 @@ function App() {
                 color: 'white'
             })
             setmodecircle({
-                left: '2px',
                 backgroundColor: 'crimson'
             })
             setSun('sun-white.png')
@@ -102,7 +100,6 @@ function App() {
                 color: 'deepskyblue'
             })
             setmodecircle({
-                left: '1.5px',
                 backgroundColor: 'darkblue'
             })
             setSun('sun-white.png')
@@ -143,7 +140,7 @@ function App() {
             document.body.style.backgroundColor = '#242424'
             document.body.style.color = 'white'
             setmodecircle({
-                left: '50%',
+                left: '16.5px',
                 backgroundColor: 'white'
             })
             setMode2({
@@ -167,16 +164,14 @@ function App() {
 
         <Alert alert={alert}/>
 
-        {/* <States mode={mode} mode2={mode2} showAlert={showAlert}/> */}
-
         {/* {showcomp && <Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>} */}
 
             <Routes>
-                <Route path='/vite-project1/' element={<States mode={mode} mode2={mode2} showAlert={showAlert}/>} />
+                <Route path='/' element={<States mode={mode} mode2={mode2} showAlert={showAlert}/>} />
 
-                <Route path='/vite-project1/login' element={<Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>}/>
+                <Route path='/login' element={<Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>}/>
 
-                <Route path='/vite-project1/about' element={<About mode={mode} mode2={mode2}/> } />
+                <Route path='/about' element={<About mode={mode} mode2={mode2}/> } />
             </Routes>
 
         </BrowserRouter>

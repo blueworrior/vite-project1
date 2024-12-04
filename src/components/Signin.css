@@ -73,6 +73,7 @@
     text-decoration: none;
     padding: 8px 24px;
     position: relative;
+    border-radius: 5px;
     right: 4px;
     &:hover{
         text-decoration: none;

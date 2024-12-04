@@ -19,8 +19,8 @@ const Signin = (props) => {
             <input style={props.mode2} type="email" />
             <h3 id='d2'>PASSWORD</h3>
             <input style={props.mode2} type="password" />
-            <button>
-              <Link id='il' to={"/vite-project1"} style={props.mode2} onClick={props.handlecomp}>Login</Link>
+            <button style={props.mode}>
+              <Link id='il' to={"/"} style={props.mode2} onClick={props.handlecomp}>Login</Link>
             </button>
         </div>
     </div>
