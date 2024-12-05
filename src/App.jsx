@@ -1,12 +1,12 @@
 import './App.css'
 import React,{useState} from 'react'
-import Navbar from './components/Navbar'
 import States from './components/States'
 import ShoppingCart from './components/Shoppingcart'
 import Signin from './components/signin'
 import Alert from './components/Alert'
 import About from './components/about'
 import { BrowserRouter, Routes, Route} from "react-router-dom"
+import Navbar from './components/navbar'
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
 
 function App() {
@@ -163,7 +163,6 @@ function App() {
         <Navbar title = "ANIDAY" handlecomp={handlecomp} handleMode={handleMode} mode={mode} mode2={mode2} sun={sun} moon={moon} modecircle={modecircle} theme={theme} setTheme={setTheme} handleTheme={handleTheme}/>
 
         <Alert alert={alert}/>
-
         {/* {showcomp && <Signin handlecomp={handlecomp} mode={mode} mode2={mode2} data={showcomp}/>} */}
 
             <Routes>

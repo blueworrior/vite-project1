@@ -46,10 +46,10 @@ const Navbar = (props) => {
               <Link style={props.mode} id="li" to={"/"}>Home</Link>
             </li>
             <li>
-            <Link style={props.mode} id="li" to={""}>Trending</Link>
+            <Link style={props.mode} id="li">Trending</Link>
             </li>
             <li>
-            <Link style={props.mode} id="li" to={""}>Category</Link>
+            <Link style={props.mode} id="li">Category</Link>
             </li>
             <li>
               <Link style={props.mode} id="li" to={"/about"}>About</Link>

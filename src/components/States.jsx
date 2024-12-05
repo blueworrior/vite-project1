@@ -81,8 +81,7 @@ const States = (props) => {
     props.showAlert("Capitalize every first letter","success")
   }
   return (
-    <>
-    {title()}
+    <div className='states'>
       <div className="searchdiv">
                 <h1>Enter text to make it Capital/Lower</h1>
                 <div className="searchbtn">
@@ -112,7 +111,7 @@ const States = (props) => {
                     <p>{text.length>0?`Your text: ${text}`:'Enter text in the textbar for preview '}</p>
 
             </div>
-    </>
+    </div>
   )
 }
 
