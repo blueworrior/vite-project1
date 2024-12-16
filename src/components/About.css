@@ -2,11 +2,12 @@
     width: 900px;
     margin-left: 150px;
     margin-top: 100px;
-    border: 1px solid blueviolet;
+    border: 1px solid;
 }
 .accordion-button{
     background-color: blueviolet;
 }
 .accordion-item{
+    color: blueviolet;
     background-color: blueviolet;
 }

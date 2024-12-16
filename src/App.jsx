@@ -18,11 +18,11 @@ function App() {
     const [moon, setMoon] = useState('moon-og.png')
 
     const [mode, setMode] = useState({
-        backgroundColor: 'bluevoilet',
+        backgroundColor: 'blueviolet',
         color: 'cyan'
     })
     const [mode2, setMode2] = useState({
-        color: 'bluevoilet',
+        color: 'blueviolet',
         backgroundColor: 'cyan'
     })
 
@@ -150,7 +150,7 @@ function App() {
             setMode(modeChange)
             setSun('sun-white.png')
             setMoon('moon-black.png')
-            showAlert('Dark mode enable','success')
+            showAlert('Boxer mode enable','success')
         }
         else if(mode.backgroundColor === 'black'){
             handleTheme()

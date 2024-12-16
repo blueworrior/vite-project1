@@ -9,15 +9,13 @@ const States = (props) => {
   
   const [text, setText] = useState("")
   
+  
   const handleuppertext = () => {
     // let ut = text.upCase();
     setText(text.toUpperCase())
-    console.log("uppercase clicked ");
     props.showAlert("Converted to UpperCase","success")
   }
   const handleChange = (event) => {
-    a++
-    console.log("Input data change")
     setText(event.target.value)
     a++
   }
@@ -63,6 +61,7 @@ const States = (props) => {
     var text = document.getElementById('textbar')
     text.select()
     navigator.clipboard.writeText(text.value)
+    document.getSelection().removeAllRanges();
     props.showAlert("Data copied","success")
   }
   const handlespaces = () => {
@@ -80,23 +79,24 @@ const States = (props) => {
     setText(newtet)
     props.showAlert("Capitalize every first letter","success")
   }
+
   return (
     <div className='states'>
       <div className="searchdiv">
                 <h1>Enter text to make it Capital/Lower</h1>
                 <div className="searchbtn">
-                    <button style={props.mode} onClick={handleuppertext}>Capital</button>
-                    <button style={props.mode} onClick={ () => {setText(text.toLowerCase())
+                    <button disabled={text.length===0} style={text.length===0 ? { color: 'gray', backgroundColor: props.mode.backgroundColor } : props.mode} onClick={handleuppertext}>Capital</button>
+                    <button disabled={text.length===0} style={text.length===0 ? { color: 'gray', backgroundColor: props.mode.backgroundColor } : props.mode} onClick={ () => {setText(text.toLowerCase())
                       props.showAlert("Converted to LowerCase","success")
                     }}>Lower</button>
-                    <button style={props.mode} onClick={handleclear}>clear</button>
-                    <button style={props.mode} onClick={handlespeak}>Speak</button>
-                    <button style={props.mode} onClick={handlemute} id="mute">Mute</button>
-                    <button style={props.mode} onClick={handlespeaktoggle} id='toggle'>Speak</button>
-                    <button style={props.mode} onClick={handleinverse}>Reverse</button>
-                    <button style={props.mode} onClick={handlecopy}>copy</button>
-                    <button style={props.mode} onClick={handlespaces}>remove space</button>
-                    <button style={props.mode} onClick={handleCapital}>Capitalize</button>
+                    <button disabled={text.length===0} style={text.length===0 ? { color: 'gray', backgroundColor: props.mode.backgroundColor } : props.mode} onClick={handleclear}>clear</button>
+                    <button disabled={text.length===0} style={text.length===0 ? { color: 'gray', backgroundColor: props.mode.backgroundColor } : props.mode} onClick={handlespeak}>Speak</button>
+                    <button disabled={text.length===0} style={text.length===0 ? { color: 'gray', backgroundColor: props.mode.backgroundColor } : props.mode} onClick={handlemute} id="mute">Mute</button>
+                    <button disabled={text.length===0} style={text.length===0 ? { color: 'gray', backgroundColor: props.mode.backgroundColor } : props.mode} onClick={handlespeaktoggle} id='toggle'>Speak</button>
+                    <button disabled={text.length===0} style={text.length===0 ? { color: 'gray', backgroundColor: props.mode.backgroundColor } : props.mode} onClick={handleinverse}>Reverse</button>
+                    <button disabled={text.length===0} style={text.length===0 ? { color: 'gray', backgroundColor: props.mode.backgroundColor } : props.mode} onClick={handlecopy}>copy</button>
+                    <button disabled={text.length===0} style={text.length===0 ? { color: 'gray', backgroundColor: props.mode.backgroundColor } : props.mode} onClick={handlespaces}>remove space</button>
+                    <button disabled={text.length===0} style={text.length===0 ? { color: 'gray', backgroundColor: props.mode.backgroundColor } : props.mode} onClick={handleCapital}>Capitalize</button>
 
                 </div>
                     {/* <input id='textbar' type="text" placeholder='Enter text' value={text} onChange={handleChange}/> */}
@@ -105,8 +105,8 @@ const States = (props) => {
             </div>
             <div className="details">
                     <p>Render: {a}</p>
-                    <p>{text.split(" ").filter((element) => { return element.length !=0}).length} Words and {text.length} characters</p>
-                    <p>{ text.length===0?0:parseFloat((text.split(" ").length)*0.008) } minutes or {parseInt((text.split(" ").length)*0.008*60)} seconds </p>
+                    <p>{text.split(/\s+/).filter((element) => { return element.length !=0}).length} Words and {text.length} characters</p>
+                    <p>{parseFloat((text.split(" ").filter((element) => { return element.length !=0}).length)*0.008) } minutes or {parseInt((text.split(" ").filter((element) => { return element.length !=0}).length)*0.008*60)} seconds </p>
                     <h2>Preview</h2>
                     <p>{text.length>0?`Your text: ${text}`:'Enter text in the textbar for preview '}</p>
 

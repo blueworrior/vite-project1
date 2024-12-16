@@ -26,7 +26,7 @@ const About = (props) => {
             </div>
 
             <div className="accordion-item" style={props.mode2}>
-                <h2 className="accordion-header">
+                <h2 className="accordion-header" style={props.mode}>
                 <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style={props.mode}>
                     Accordion Item #2
                 </button>

@@ -7,20 +7,17 @@ import { Link } from "react-router-dom";
 
 const Navbar = (props) => {
 
-  const [menu, setmenu] = useState(150)
+  const [menu, setmenu] = useState(350)
 
   const menuclick = (() => {
-    if(menu === 150)
+    if(menu === 350)
       setmenu(0)
     else
-      setmenu(150)
+      setmenu(350)
   })
 
   return (
     <>
-      <style>
-        <body style={props.mode}></body>
-      </style>
       <div style={props.mode} className="navbar">
           <ul id="nav">
             <li id="wb">{props.title}</li>
@@ -40,7 +37,7 @@ const Navbar = (props) => {
 
         <div style={{
           ...props.mode,
-          left: menu,
+          bottom: menu,
           }} className="menubar">
             <li>
               <Link style={props.mode} id="li" to={"/"}>Home</Link>
